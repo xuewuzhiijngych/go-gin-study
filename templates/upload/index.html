@@ -1,0 +1,18 @@
+{{define "uploader"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单文件上传</title>
+</head>
+<body>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="f1">
+
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
+{{end}}
