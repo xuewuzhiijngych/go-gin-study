@@ -1,7 +1,14 @@
-{{define "inc/index"}}
+{{define "index"}}
 {{template "head"}}
 <div>
     index pages
+
+
+    {{range $i, $v := .articles}}
+    {{$i}}
+    {{$v.Title}}
+    {{end}}
+
 </div>
 
 {{template "foot"}}

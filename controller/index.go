@@ -1,8 +1,10 @@
 package controller
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	model "yyy/models"
 )
 
 func init() {
@@ -14,7 +16,12 @@ func setIndexRouter() {
 }
 
 func IndexHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"message": "IndexHandler",
+	var articles []model.Article
+	model.Db.Find(&articles)
+
+	fmt.Printf("$#s", articles)
+
+	c.HTML(http.StatusOK, "index", gin.H{
+		"articles": articles,
 	})
 }
