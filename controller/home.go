@@ -6,10 +6,10 @@ import (
 )
 
 func init() {
-	setHomeRouter()
+	Router()
 }
 
-func setHomeRouter() {
+func Router() {
 	R.GET("/home", HomeHandler)
 }
 
