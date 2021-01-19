@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"yyy/controller"
 	_ "yyy/controller"
+	model "yyy/models"
 )
 
 func init() {
@@ -19,6 +21,8 @@ func main() {
 	//log.Println(name)
 
 	//db.Link()
+
+	model.Insert()
 
 	r := controller.R
 	if err := r.Run(); err != nil {
