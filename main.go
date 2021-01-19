@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"yyy/router"
+	"yyy/controller"
+	_ "yyy/controller"
 )
 
 func init() {
@@ -19,7 +20,7 @@ func main() {
 
 	//db.Link()
 
-	r := router.SetupRouter()
+	r := controller.R
 	if err := r.Run(); err != nil {
 		fmt.Println("startup service failed, err:%v\n", err)
 	}

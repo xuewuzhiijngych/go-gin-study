@@ -8,12 +8,6 @@ import (
 	"path/filepath"
 )
 
-func HelloHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"message": "ok",
-	})
-}
-
 //loadTemplates 模板继承
 func loadTemplates(templatesDir string) multitemplate.Renderer {
 	r := multitemplate.NewRenderer()
@@ -57,4 +51,11 @@ func SetupRouter() *gin.Engine {
 
 	r.GET("/hello", HelloHandler)
 	return r
+}
+
+// 默认入口
+func HelloHandler(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"message": "Hello Gin",
+	})
 }
