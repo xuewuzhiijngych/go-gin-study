@@ -1,0 +1,13 @@
+{
+  "app_name": "test",
+  "app_mode": "debug",
+  "app_host": "127.0.0.1",
+  "app_port": "8080",
+
+  "username": "root",
+  "password": "root",
+  "network": "tcp",
+  "server": "127.0.0.1",
+  "port": 3306,
+  "database": "golang"
+}

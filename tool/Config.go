@@ -11,6 +11,13 @@ type Config struct {
 	AppMode string `json:"app_mode"`
 	AppHost string `json:"app_host"`
 	AppPort string `json:"app_port"`
+
+	DbUserName string `json:"username"`
+	DbPassWord string `json:"password"`
+	NETWORK    string `json:"network"`
+	SERVER     string `json:"server"`
+	DbPORT     int    `json:"port""`
+	DataBase   string `json:"database"`
 }
 
 var _cfg *Config = nil
